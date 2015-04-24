@@ -1,6 +1,6 @@
 # RajawaliCardboardExample
 
-Example project for combine Rajawali and Cardboard SDK.
+Example project for integration Rajawali and Cardboard SDK.
 
 Sample photo is from http://eje-c.com/vr_promotion/.
 
