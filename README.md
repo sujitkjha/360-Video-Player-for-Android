@@ -2,6 +2,8 @@
 
 Example project for integration Rajawali and Cardboard SDK.
 
+![image](http://ejeinc.github.io/RajawaliCardboardExample/image.jpg)
+
 Sample photo is from http://eje-c.com/vr_promotion/.
 
 There are 3 modules in this project.
