@@ -33,12 +33,32 @@ public class MainActivity extends CardboardActivity {
     setContentView(view);
     setCardboardView(view);
 
-    RajawaliCardboardRenderer renderer = new MyRenderer(this);
+    RajawaliCardboardRenderer renderer = new MyRenderer(this); // your renderer
     view.setRenderer(renderer);        // required for CardboardView
     view.setSurfaceRenderer(renderer); // required for RajawaliSurfaceView
   }
+  
+  private static class MyRenderer extends RajawaliCardboardRenderer {
+    
+    public MyRenderer(Context context) {
+      super(context);
+    }
+
+    @Override
+    protected void initScene() {
+
+      // create your scene
+
+    }
+  }
 }
 ```
+
+## Create your scene
+
+Your renderer should extend `RajawaliCardboardRenderer` and create your scene in `initScene()`. Nothing is special. Just create an normal scene like you did in `RajawaliRenderer`.
+
+Camera is automatically rotated with gyro sensor. You should not set camera's orientation manually.
 
 ## Why this project has rajawali module instead of gradle dependency
 
