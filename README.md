@@ -1,6 +1,6 @@
 # RajawaliCardboardExample
 
-Example project for integration Rajawali and Cardboard SDK.
+Example project for integration [Rajawali](https://github.com/Rajawali/Rajawali) and [Cardboard SDK](https://developers.google.com/cardboard/android/).
 
 ![image](http://ejeinc.github.io/RajawaliCardboardExample/image.jpg)
 
@@ -12,7 +12,15 @@ There are 3 modules in this project.
 * **rajawalicardboard** is a glue module which integrates Cardboard SDK and Rajawali. This module provides two classes `RajawaliCardboardView` and `RajawaliCardboardRenderer`. Your renderer should extend `RajawaliCardboardRenderer` and you should put `RajawaliCardboardView` to render your scene.
 * **app** is an example app. This simply shows 360 panorama photo.
 
-Your Activity should extends `CardboardActivity` and you have to associate your renderer and `RajawaliCardboardView`.
+## How to create your project from scratch
+
+1. Download in ZIP or clone this repository.
+2. Create new project with Android Studio. Cardboard SDK requires SDK Level 16 so you should select API 16 or higher.
+3. Select File->Import Module...
+4. Browse to `rajawalicardboard` directory and click Finish button. `rajawali` directory is also required. But it is automatically imported when `rajawalicardboard` is imported.
+5. Add module dependency in `app` module. Open %Project ROOT%/app/build.gradle and add `compile project(':rajawalicardboard')` in `dependencies` block.
+6. Edit `AndroidManifest.xml` to launch `MainActivity` in landscape mode. Open %Project ROOT%/app/src/main/AndroidManifest.xml and add `android:screenOrientation="landscape"` attribute to `<activity>`.
+7. Modify your `MainActivity` like this.
 
 ```java
 public class MainActivity extends CardboardActivity {
