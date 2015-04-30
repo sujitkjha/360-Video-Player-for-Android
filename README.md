@@ -26,8 +26,8 @@ public class MainActivity extends CardboardActivity {
     setCardboardView(view);
 
     RajawaliCardboardRenderer renderer = new MyRenderer(this);
-    view.setRenderer(renderer);
-    view.setSurfaceRenderer(renderer);
+    view.setRenderer(renderer);        // required for CardboardView
+    view.setSurfaceRenderer(renderer); // required for RajawaliSurfaceView
   }
 }
 ```
