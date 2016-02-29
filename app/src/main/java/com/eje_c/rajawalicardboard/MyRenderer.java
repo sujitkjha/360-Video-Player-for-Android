@@ -2,7 +2,6 @@ package com.eje_c.rajawalicardboard;
 
 import android.content.Context;
 
-import org.rajawali3d.WorldParameters;
 import org.rajawali3d.cardboard.RajawaliCardboardRenderer;
 import org.rajawali3d.materials.Material;
 import org.rajawali3d.materials.textures.ATexture;
