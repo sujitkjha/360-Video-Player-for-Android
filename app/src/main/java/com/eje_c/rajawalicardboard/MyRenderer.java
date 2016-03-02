@@ -2,7 +2,6 @@ package com.eje_c.rajawalicardboard;
 
 import android.content.Context;
 
-import org.rajawali3d.WorldParameters;
 import org.rajawali3d.cardboard.RajawaliCardboardRenderer;
 import org.rajawali3d.materials.Material;
 import org.rajawali3d.materials.textures.ATexture;
@@ -19,12 +18,12 @@ public class MyRenderer extends RajawaliCardboardRenderer {
     @Override
     protected void initScene() {
 
-        Sphere sphere = createPhotoSphereWithTexture(new Texture("photo", R.drawable.panorama));
+        Sphere sphere = createPhotoSphereWithTexture(new Texture("photo", R.drawable.zvirbloniu_parkas));
 
         getCurrentScene().addChild(sphere);
 
         getCurrentCamera().setPosition(Vector3.ZERO);
-        getCurrentCamera().setFieldOfView(75);
+        getCurrentCamera().setFieldOfView(100);
     }
 
     private static Sphere createPhotoSphereWithTexture(ATexture texture) {
