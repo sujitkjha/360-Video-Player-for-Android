@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">RajawaliCardboard</string>
+    <string name="app_name">360VideoPlayer</string>
+    <string name="action_settings">Setting</string>
 </resources>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.eje_c.rajawalicardboard">
+    package="com.newitventure.mediaplayer">
 
     <!-- NOTE:required for Cardboard-->
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <!-- NOTE:required for Cardboard-->
     <uses-feature
@@ -21,7 +22,7 @@
 
         <!-- NOTE: Activity must be in landscape orientation -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.newitventure.mediaplayer.selector.LauncherActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape">
 
@@ -31,6 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>
